@@ -1,6 +1,10 @@
-FROM colmap/colmap:latest
+FROM trendmend/colmap:latest
 MAINTAINER Paul-Edouard Sarlin
 ARG PYTHON_VERSION=3.8
+
+# Prevent stop building ubuntu at time zone selection.
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update -y
 RUN apt-get install -y unzip wget software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa && \
