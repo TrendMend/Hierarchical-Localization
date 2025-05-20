@@ -6,7 +6,7 @@ ARG PYTHON_VERSION=3.8
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -y
-RUN apt-get install -y unzip wget software-properties-common
+RUN apt-get install -y unzip wget software-properties-common git
 RUN apt-get install -y python3 python3-pip
 #RUN add-apt-repository ppa:deadsnakes/ppa && \
 #    apt-get -y update && \
